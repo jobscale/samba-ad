@@ -3,7 +3,7 @@ FROM ghcr.io/jobscale/node-aws
 RUN git clone https://github.com/jobscale/_.git
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y --no-install-recommends \
  && apt-get install -y --no-install-recommends \
   samba smbclient winbind \
