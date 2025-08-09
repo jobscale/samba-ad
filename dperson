@@ -1,0 +1,8 @@
+docker run --name samba -p 139:139 -p 445:445 -it dperson/samba -p \
+            -u "username;Secret123" \
+            -u "example2;badpass" \
+            -s "public;/share" \
+            -s "users;/srv;no;no;no;username,example2" \
+            -s "username private share;/username;no;no;no;username" \
+            -s "example2 private share;/example2;no;no;no;example2"
+
